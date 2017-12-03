@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Razor - Estudo</title>
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    @*<link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">*@
+    <!-- Custom styles for this template -->
+    @*<link href="~/css/simple-sidebar.css" rel="stylesheet">*@
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    @*<script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Estudo AngularJS</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="menu">
+            <ul>
+                <li class="visible-xs"><a href="#">Sair</a></li>
+                <li class="active">@Html.ActionLink("Inicio", "Index", new { controller = "Exemplos" })</li>
+                <li>@Html.ActionLink("Exemplo 01", "Exemplo01", new { controller = "Exemplos" })</li>
+                <li>@Html.ActionLink("Exemplo 02", "Exemplo02", new { controller = "Exemplos" })</li>
+                <li>@Html.ActionLink("Strongly Typed Helpers", "StronglyTyped", new { controller = "Exemplos" })</li>
+                <li><a href="#">Plugins</a></li>
+                <li><a href="#">Ir para o site</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/script.js"></script>
+</body>
+</html>
